@@ -18,7 +18,7 @@ This tutorial has been written with the intent of helping folks get up and runni
 Prerequisites
 ==============================
 
-In this tutorial we will demonstrate installing the VOLTTRON platform at an `Ubuntu 20.04 LTS (Focal Fossa) Virtual machine <https://releases.ubuntu.com/20.04/>`_. In order to follow the tutorial the following are required
+In this tutorial we will demonstrate installing the VOLTTRON platform at an `Ubuntu 20.04 LTS (Focal Fossa) <https://releases.ubuntu.com/20.04/>`_ Virtual machine. In order to follow the tutorial the following are required
 
 -   Linux OS image (e.g., Ubuntu 20.04)
 -   Virtualization software (e.g., VirtualBox, VMware)
@@ -73,6 +73,7 @@ Verify git installation
 ------------------------------
 
 Download the VOLTTRON code to the default home directory using :code:`git clone` command.
+
 .. code-block:: bash
 
        $ cd ~
@@ -131,7 +132,7 @@ VOLTTRON is a Python-based platform. In this step, we will rely on The bootstrap
    VOLTTRON provides different message bus options. In this tutorial we will demonstrate the default ZeroMQ option. (Read more about :ref:`message bus<Message-Bus>`.)
 
 
-Running the following command (this may take a while)
+Running the following command. (This may take a while.)
 
 .. code-block:: bash
 
@@ -156,7 +157,7 @@ Now we activate the Python virtual environment
        $ source env/bin/activate
 
 
-You may notice the command prompt has changed with the virtual environment name as prefix. (i.e., :code:`(volttron) user@host:~/volttron $ `).
+You may notice the command prompt has changed with the virtual environment name as prefix. (i.e., :code:`(volttron) user@host:~/volttron $`).
 
 You can use the following command to verify if you are inside a virtual environment
 
@@ -188,12 +189,12 @@ Now we are ready to start VOLTTRON
 
 .. code-block:: bash
 
-       ./start-volttron
+       $ ./start-volttron
 
 .. code-block:: bash
 
        # expected output similar to this
-         ...
+       ...
        Starting VOLTTRON verbosely in the background with VOLTTRON_HOME=/home/user/.volttron
        Waiting for VOLTTRON to startup..
        VOLTTRON startup complete
@@ -204,7 +205,7 @@ Now we are ready to start VOLTTRON
     This is a very useful command to inspect the status of VOLTTRON.
 
 
-. code-block:: bash
+.. code-block:: bash
 
        $ vctl status
 
@@ -281,12 +282,12 @@ In addition to the :code:`vctl status`, we would like to show you another way to
 .. code-block:: bash
 
        # example output (error)
-         2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: No response to hello message after 10 seconds.
-         2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Type of message bus used zmq
-         2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: A common reason for this is a conflicting VIP IDENTITY.
-         2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Another common reason is not having an auth entry onthe target instance.
-         2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Shutting down agent.
-         ...
+       2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: No response to hello message after 10 seconds.
+       2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Type of message bus used zmq
+       2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: A common reason for this is a conflicting VIP IDENTITY.
+       2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Another common reason is not having an auth entry onthe target instance.
+       2022-03-04 13:16:05,469 (listeneragent-3.3 3233) volttron.platform.vip.agent.core ERROR: Shutting down agent.
+       ...
 
 
 .. _Clean-up:
